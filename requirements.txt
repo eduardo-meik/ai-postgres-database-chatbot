@@ -123,7 +123,6 @@ Pympler==1.0.1
 pyOpenSSL
 pyparsing
 pypdf==3.11.0
-pypiwin32==223
 pyrsistent==0.19.3
 PySocks
 python-dateutil
@@ -133,7 +132,6 @@ python-pptx==0.6.21
 pyttsx3==2.90
 pytz
 pytz-deprecation-shim==0.1.0.post0
-pywin32
 PyYAML==6.0
 pyzmq
 regex==2023.6.3
