@@ -7,11 +7,11 @@ load_dotenv()
 
 # Set up Postgres database credentials
 db_credentials = {
-    'dbname'    :   os.getenv("SEMANTIC_DB"),
-    'user'      :   os.getenv("POSTGRES_USERNAME"),
-    'password'  :   os.getenv("POSTGRES_PASSWORD"),
-    'host'      :   os.getenv("HOST"),
-    'port'      :   os.getenv("PORT")
+    'dbname'    :   os.getenv("PGDATABASE"),# Original var SEMANTIC_DB
+    'user'      :   os.getenv("PGUSER"), # Original var POSTGRES_USERNAME
+    'password'  :   os.getenv("PGPASSWORD"), #Original var POSTGRES_PASSWORD
+    'host'      :   os.getenv("PGHOST"), # Original var HOST
+    'port'      :   os.getenv("PGPORT") # Original var PORT
 }
 
 
