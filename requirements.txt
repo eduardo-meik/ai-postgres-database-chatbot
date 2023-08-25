@@ -123,6 +123,7 @@ Pympler==1.0.1
 pyOpenSSL
 pyparsing
 pypdf==3.11.0
+pyproject-toml
 pyrsistent==0.19.3
 PySocks
 python-dateutil
