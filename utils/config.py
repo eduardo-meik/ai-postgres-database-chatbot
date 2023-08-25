@@ -1,18 +1,16 @@
-import os 
-from dotenv import load_dotenv
+import streamlit as st
+import os
 
 
-load_dotenv()
-
-
-# Set up Postgres database credentials
+# Set up Postgres database credentials using st.secrets
 db_credentials = {
-    'dbname'    :   os.getenv("PGDATABASE"),# Original var SEMANTIC_DB
-    'user'      :   os.getenv("PGUSER"), # Original var POSTGRES_USERNAME
-    'password'  :   os.getenv("PGPASSWORD"), #Original var POSTGRES_PASSWORD
-    'host'      :   os.getenv("PGHOST"), # Original var HOST
-    'port'      :   os.getenv("PGPORT") # Original var PORT
+    'dbname'    :   st.secrets["db_credentials"]["PGDATABASE"],
+    'user'      :   st.secrets["db_credentials"]["PGUSER"],
+    'password'  :   st.secrets["db_credentials"]["PGPASSWORD"],
+    'host'      :   st.secrets["db_credentials"]["PGHOST"],
+    'port'      :   st.secrets["db_credentials"]["PGPORT"]
 }
+
 
 
 # Set up OpenAI variables 
