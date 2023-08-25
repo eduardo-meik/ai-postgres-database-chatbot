@@ -110,7 +110,7 @@ pooch
 prompt-toolkit 
 protobuf==4.23.3
 psutil
-psycopg2
+psycopg2-binary
 pure-eval
 pyarrow==12.0.1
 PyAudio==0.2.13
