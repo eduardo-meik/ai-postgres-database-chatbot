@@ -1,10 +1,15 @@
+import sys
+
+# Add your project directory to the Python path
+sys.path.append('/path/to/your/project')
+
 import streamlit as st
 from utils.config import db_credentials, MAX_TOKENS_ALLOWED, MAX_MESSAGES_TO_OPENAI, TOKEN_BUFFER
 from utils.system_prompts import get_final_system_prompt
 from utils.chat_functions import run_chat_sequence, clear_chat_history, count_tokens, prepare_sidebar_data
 from utils.database_functions import database_schema_dict
 from utils.function_calling_spec import functions
-from utils.helper_functions import  save_conversation
+from utils.helper_functions import save_conversation
 from assets.dark_theme import dark
 from assets.light_theme import light
 from assets.made_by_sdw import made_by_sdw
