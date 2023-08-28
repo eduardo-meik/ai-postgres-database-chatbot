@@ -1,7 +1,7 @@
 import sys
 
 # Add your project directory to the Python path
-sys.path.append('/path/to/your/project')
+sys.path.append('utils')
 
 import streamlit as st
 from utils.config import db_credentials, MAX_TOKENS_ALLOWED, MAX_MESSAGES_TO_OPENAI, TOKEN_BUFFER
