@@ -1,8 +1,7 @@
-psycopg2-binary
 json
 requests
 tenacity
 tiktoken
-import psycopg2
+psycopg2
 datetime
 streamlit
