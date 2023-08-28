@@ -67,7 +67,7 @@ jsonschema==4.17.3
 jupyter_client
 jupyter_core
 kiwisolver
-langchain==0.0.150
+langchain
 langchainplus-sdk==0.0.17
 llvmlite==0.40.1
 lxml==4.9.2
