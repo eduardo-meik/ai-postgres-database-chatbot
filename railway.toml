@@ -1,9 +1,8 @@
-# railway.toml
-
-# Build settings
 [build]
-frontend = "nix"
+builder = "NIXPACKS"
 
-# Run settings
-[run]
+[deploy]
+numReplicas = 1
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
 start = "nix-shell --run 'streamlit run app.py'"
