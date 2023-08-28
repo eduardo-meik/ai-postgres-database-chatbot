@@ -49,11 +49,7 @@ if selected_schema in sidebar_data:
 else:
     st.sidebar.write("Please select a valid schema.")
 
-
-
-
-
-
+    
     ### SAVE CONVERSATION BUTTON ###
 
     # Add a button to SAVE the chat/conversation
