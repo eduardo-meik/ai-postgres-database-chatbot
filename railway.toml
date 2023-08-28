@@ -1,0 +1,9 @@
+# railway.toml
+
+# Build settings
+[build]
+frontend = "nix"
+
+# Run settings
+[run]
+start = "nix-shell --run 'streamlit run app.py'"
