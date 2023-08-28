@@ -20,34 +20,32 @@ from assets.made_by_sdw import made_by_sdw
 
 if __name__ == "__main__":
 
-########### A. SIDEBAR ###########
+    ########### A. SIDEBAR ###########
 
-# Prepare data for the sidebar dropdowns
-sidebar_data = prepare_sidebar_data(database_schema_dict)
-st.sidebar.markdown("<div class='made_by'>Made by SDW🔋</div>", unsafe_allow_html=True)
+    # Prepare data for the sidebar dropdowns
+    sidebar_data = prepare_sidebar_data(database_schema_dict)
+    st.sidebar.markdown("<div class='made_by'>Made by SDW🔋</div>", unsafe_allow_html=True)
 
-# Display the author's credits
-st.markdown(made_by_sdw, unsafe_allow_html=True)
-st.sidebar.title("🔍 Postgres DB Objects Viewer")
+    
 
-# Dropdown for schema selection
-selected_schema = st.sidebar.selectbox("📂 Select a schema", list(sidebar_data.keys()))
+    ### POSTGRES DB OBJECTS VIEWER ###
 
-# Verify selected_schema before proceeding
-if selected_schema in sidebar_data:
+    st.markdown(made_by_sdw, unsafe_allow_html=True)
+    st.sidebar.title("🔍 Postgres DB Objects Viewer")
+
+
+    # Dropdown for schema selection
+    selected_schema = st.sidebar.selectbox("📂 Select a schema", list(sidebar_data.keys()))
+
+
     # Dropdown for table selection based on chosen Schema
     selected_table = st.sidebar.selectbox("📜 Select a table", list(sidebar_data[selected_schema].keys()))
 
-    # Verify selected_table before proceeding
-    if selected_table in sidebar_data[selected_schema]:
-        # Display columns of the chosen table with interactivity using checkboxes
-        st.sidebar.subheader(f"🔗 Columns in {selected_table}")
-        for column in sidebar_data[selected_schema][selected_table]:
-            is_checked = st.sidebar.checkbox(f"📌 {column}")
-    else:
-        st.sidebar.write("Please select a valid table within the selected schema.")
-else:
-    st.sidebar.write("Please select a valid schema.")
+
+    # Display columns of the chosen table with interactivity using checkboxes
+    st.sidebar.subheader(f"🔗 Columns in {selected_table}")
+    for column in sidebar_data[selected_schema][selected_table]:
+        is_checked = st.sidebar.checkbox(f"📌 {column}") 
 
     
     ### SAVE CONVERSATION BUTTON ###
