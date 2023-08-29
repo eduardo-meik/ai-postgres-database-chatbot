@@ -2,6 +2,6 @@ jsonschema
 requests
 tenacity
 tiktoken
-psycopg2
+psycopg2-binary
 datetime
 streamlit
